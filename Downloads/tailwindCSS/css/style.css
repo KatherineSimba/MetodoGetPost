@@ -1,0 +1,24 @@
+.imagen{
+    background-image: url('/img/avatar.jpg');
+    position: absolute;
+    padding:30px ;
+    top: 160px;
+    left: 1070px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+
+.h6{
+    padding:50px ;
+    top: 5px;
+}
+
+body {
+     background-color: #363434;
+     }
+
+body { 
+    color: rgb(250, 245, 245);
+ }

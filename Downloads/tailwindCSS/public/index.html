@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/public/bloc.html" rel="stylesheet" type="text/css">
+
+</head>
+ 
+<body class="container mx-auto mt-5">
+  <div class="imagen bg-contain bg-repeat-x"></div>
+  <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+    </div>
+    <div class="block lg:hidden">
+      <button id='boton' class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+    </div>
+    <div id='menu' class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden">
+      <div class="text-sm lg:flex-grow">
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Home
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Blog
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Projects
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+          About
+        </a>
+      </div>
+    </div>
+  </nav>
+  <script src="alert.js"></script>
+  </div>    
+  <h2 class="mt-12 lg:mt-0 max-w-3xl text-3xl sm:text-4xl text-primary font-semibold sm:text-left md:text-center lg:text-left">
+  <br></br>
+  <h1>Hello, My name is Katherine Simba
+    <br>
+    I'm a Front End Developer <br>
+  </h1>
+  </h2>
+        <section class>
+          <h2 class="mt-64 font-normal text-accent tracking-widestest">LATEST WRITINGS</h2>
+          <br class="mb-6 lg:hidden">
+          <ul class="mt-3 divide-y divide-subtle">
+            <li class="py-3">
+              <a>
+                <div class="-mx-5 -my-3 px-5 py-3 group flex flex-col sm:flex-row sm:justify-between sm:items-end hover:bg-secondary">
+                  <div>
+                    <h3 class="text-xl font-semibold group-hover:text-accent">2020 into 2021</h3>
+                    <h4 class="font-medium text-tertiary">My personal year in review</h4>
+                  </div>
+                  <div class="mt-2 sm:mt-0 text-sm sm:text-base text-accent sm:text-tertiary">December 30th 2020</div>
+                </div>
+              </a>
+            </li>
+            <li class="py-3">
+              <a>
+                <div class="-mx-5 -my-3 px-5 py-3 group flex flex-col sm:flex-row sm:justify-between sm:items-end hover:bg-secondary">
+                  <div>
+                    <h3 class="text-xl font-semibold group-hover:text-accent">How to Dark Mode in React and Tailwind CSS</h3>
+                    <h4 class="font-medium text-tertiary">Add dark mode using CSS variables and Context API</h4>
+                  </div>
+                  <div class="mt-2 sm:mt-0 text-sm sm:text-base text-accent sm:text-tertiary">July 25th 2020</div>
+                </div>
+              </a>
+            </li>
+            <li class="py-3">
+              <a>
+                <div class="-mx-5 -my-3 px-5 py-3 group flex flex-col sm:flex-row sm:justify-between sm:items-end hover:bg-secondary">
+                  <div>
+                    <h3 class="text-xl font-semibold group-hover:text-accent">Welcome to jeffjadulco.com!</h3>
+                    <h4 class="font-medium text-tertiary">Introduction and why I created this site</h4>
+                  </div>
+                  <div class="mt-2 sm:mt-0 text-sm sm:text-base text-accent sm:text-tertiary">July 3rd 2020</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+         </section>
+          <section class="">
+            <h2 class="mt-32 font-normal text-accent tracking-widestest">PROJECTS</h2>
+            <ul class="mt-3 divide-y divide-subtle">
+              <li class="py-3">
+                <a  target="_blank" rel="noopener noreferrer">
+                  <div class="-mx-5 -my-3 px-5 py-3 group flex justify-between sm:items-end space-x-3 sm:space-x-0 hover:bg-secondary">
+                    <div>
+                      <h3 class="text-xl font-semibold text-primary group-hover:text-accent">jeffjadulco.com</h3>
+                      <h4 class="font-medium text-tertiary">My personal website made with React and Gatsby.</h4>
+                    </div>
+                    <span class="text-sm sm:text-base text-accent sm:text-tertiary">2020</span>
+                  </div>
+                </a>
+              </li>
+              <li class="py-3">
+                <a  target="_blank" rel="noopener noreferrer">
+                  <div class="-mx-5 -my-3 px-5 py-3 group flex justify-between sm:items-end space-x-3 sm:space-x-0 hover:bg-secondary">
+                    <div>
+                      <h3 class="text-xl font-semibold text-primary group-hover:text-accent">to do app</h3>
+                      <h4 class="font-medium text-tertiary">My first time with React</h4>
+                    </div>
+                    <span class="text-sm sm:text-base text-accent sm:text-tertiary">2020</span>
+                  </div>
+                </a>
+              </li>
+              <li class="py-3">
+                <a  target="_blank" rel="noopener noreferrer">
+                  <div class="-mx-5 -my-3 px-5 py-3 group flex justify-between sm:items-end space-x-3 sm:space-x-0 hover:bg-secondary">
+                    <div>
+                      <h3 class="text-xl font-semibold text-primary group-hover:text-accent">unity-guid-regenerator</h3>
+                      <h4 class="font-medium text-tertiary">An editor tool I made to regenerate GUID of Unity assets</h4>
+                    </div><span class="text-sm sm:text-base text-accent sm:text-tertiary">2020</span>
+                  </div>
+                </a>
+              </li>
+              <li class="py-3">
+                <a target="_blank" rel="noopener noreferrer">
+                  <div class="-mx-5 -my-3 px-5 py-3 group flex justify-between sm:items-end space-x-3 sm:space-x-0 hover:bg-secondary">
+                    <div><h3 class="text-xl font-semibold text-primary group-hover:text-accent">Abducktion</h3>
+                      <h4 class="font-medium text-tertiary">Global Game Jam 2016 entry. Made with friends.</h4>
+                    </div>
+                    <span class="text-sm sm:text-base text-accent sm:text-tertiary">2016</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+      
+      
+    
+       
+    </body>
+   
+   
+</html>

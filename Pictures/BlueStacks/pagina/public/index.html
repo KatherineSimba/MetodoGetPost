@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-react-helemt='lang' class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/public/output.css">
+  <style>
+    .carousel-open:checked+.carousel-item {
+      position: static;
+      opacity: 100;
+    }
+
+    .carousel-item {
+      -webkit-transition: opacity 0.6s ease-out;
+      transition: opacity 0.6s ease-out;
+    }
+
+    #carousel-1:checked~.control-1,
+    #carousel-2:checked~.control-2,
+    #carousel-3:checked~.control-3 {
+      display: block;
+    }
+
+    .carousel-indicators {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+
+    #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+    #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+    #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+      color: #2b6cb0;
+      /*Set to match the Tailwind colour you want the active one to be */
+    }
+  </style>
+</head>
+
+<body class=" mx-auto ">
+  <div class="flex h-10 bg-gray-800 items-center justify-center">
+    <div class="flex w-1/2 pl-72">
+      <p> Equipamos el futuro hoy. </p>
+    </div>
+    <div class="flex w-1/2">
+      <p>Teléfono: (593) 999 705 620</p>
+      <p class="px-5">Email:probayo@yavirac.edu.ec</p>
+    </div>
+  </div>
+  <div class="flex h-20 bg-white items-center justify-center">
+    <div class="flex w-1/2 pl-72">
+      <img src="/public/imagenes/logo_nur_tech.png">
+    </div>
+    <div class="btn-right"> <a href="#make-donation" class="btn popup-with-zoom-anim">
+        <i class="fa fa-heart-o">
+        </i>Dona un Computador</a>
+    </div>
+  </div>
+  <nav class="flex items-center justify-between flex-wrap bg-yellow-500  p-5 ">
+    <div class="block lg:hidden">
+      <button id='boton'
+        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+    <div id='menu' class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden ">
+      <div class="text-sm lg:flex-grow ">
+        <a href="#responsive-header"
+          class="block mt-4 lg:inline-block lg:mt-0 text-center  text-black-300 hover:text-white mr-4">
+          CASA
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-300hover:text-white mr-4">
+          El PROYECTO
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-300 hover:text-white mr-4">
+          COMO AYUDAR
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-300 hover:text-white mr-4">
+          VOLUNTARIOS
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-300 hover:text-white mr-4">
+          DOCENTES
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-300 hover:text-white mr-4">
+          CONTACTO
+        </a>
+      </div>
+    </div>
+  </nav>
+  <script>
+document.getElementById('boton').onclick = function(){
+	        document.getElementById("menu").classList.toggle("hidden");
+        }
+  </script>
+  <div class="bg-white font-sans leading-normal tracking-normal pb-72">
+    <div class="carousel relative shadow-2xl">
+      <div class="carousel-inner relative overflow-hidden w-full">
+        <!--Slide 1-->
+        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+          checked="checked">
+        <div class="carousel-item absolute opacity-0" style="height:50vh; ">
+          <div class="block h-full w-full text-white text-5xl text-center">
+            <img src="/public/imagenes/slide_3.png">
+          </div>
+
+        </div>
+        <label for="carousel-3"
+          class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-2"
+          class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+        <!--Slide 2-->
+        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+          <div class="block h-full w-full  text-white text-5xl text-center">
+            <img src="/public/imagenes/slide_2.png">
+          </div>
+        </div>
+        <label for="carousel-1"
+          class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-3"
+          class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+        <!--Slide 3-->
+        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+          <div class="block h-full w-full text-white text-5xl text-center">
+            <img src="/public/imagenes/slide_4.png">
+          </div>
+        </div>
+        <label for="carousel-2"
+          class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-1"
+          class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+
+        <ol class="carousel-indicators">
+          <li class="inline-block mr-3">
+            <label for="carousel-1"
+              class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+          </li>
+          <li class="inline-block mr-3">
+            <label for="carousel-2"
+              class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+          </li>
+          <li class="inline-block mr-3">
+            <label for="carousel-3"
+              class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+          </li>
+        </ol>
+
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="flex h-1 px-32 items-center justify-center w-full text-1xl">
+      <div class="w-1/2 pr-20 text-1xl">
+        <span>
+          <strong>¿QUÉ<br></strong>
+          <small>es NUR TECH?</small>
+        </span>
+        <hr>
+        <small class="text-2x1">
+          <p class="text-1xl">
+            A causa del COVID 19,con el objetivo de precautelar la salud de estudiante y docente,las autoridades
+            determinaron el cambio de modalidad educativa de presencial a virtual. En consecuencia muchas familias se
+            enfrentaron a esta
+            nueva situacion no siempre contando con computadores en sus hogares.
+          </p>
+          <p class="text-1xl"><br>
+            <strong>NUR TECH</strong>
+            es un proyecto que tiene como onjetivo entregar computadoras refaccionados a estudiantes de
+            Institutos Tecnológicos Superiores de Quito y sus familias que al momento no disponen de equipos propios.
+          </p><br>
+          <p class="text-1xl">
+            El proyecto esgestionado por un grupo de voluntarios que son docentes del ITS Benito Juarez y activistas
+            locales.
+          </p><br>
+          <p class="text-1xl">
+            Nuestro proceso tiene tres pasos:
+            <strong>recolectar, acondicionar y entrgar</strong>
+            . En el primer paso nos ponemos en contacto
+            con las personas que desean donar equipos, y se define una cita para recolectar el equipo a domicilio, se
+            cambian partes
+            y piezas si hace equipos son acondicionado: se borran sus discos duros, se revisan los componentes, se
+            cambian
+            partes y piezas si
+            hace falta. Finalmente se hace la entrega del computador refaccionado en el domicilio del estudiante.
+          </p>
+        </small>
+      </div>
+
+      <div class="flex w-1/5 h-50 bg-yellow-500 items-center ">
+        <small>
+          <p class="text-center w-full text-4xl">
+          <h3>
+            El mejoramiento del mundo puede ser logrado por medio de hechos puros y hermosos,
+            por medio de una conducta loable y correcta.
+            <br>
+            <strong>
+              <span> Bahá’u’lláh </span>
+            </strong>
+          </h3>
+          </p>
+        </small>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="flex flex-row ... h-80 px-72 items-center ">
+      <div class="w-1/2 pr-50 text-1xl w-full">
+        <img src="/public/imagenes/icon_give.png">
+        <small>
+          <h4>Recolectar</h4>
+          <p>Se acuerda una cita con el donante para retirar el equipo y/o partes.</p>
+        </small>
+      </div>
+      <div class="w-1/2 pr-50 text-1xl w-full">
+        <img src="/public/imagenes/icon_fix.png">
+        <small>
+          <h4>Acondicionar</h4>
+          <p>A cada equipo se le hace: limpieza, mantenimiento, remanufactura e instalación de software base</p>
+        </small>
+      </div>
+      <div class="w-1/2 pr-50 text-1xl w-full">
+        <img src="/public/imagenes/icon_delivery.png">
+        <small>
+          <h4>Entregar</h4>
+          <p>Llevamos los equipos directo a la casa de los estudiantes.</p>
+          <a></a>Dona ahora
+        </small>
+      </div>
+    </div>
+  </div>
+  <div class="w-full h-20 bg-gray-100 " style="background-image:url('/public/imagenes/fondo.jpg')">
+    <div class="flex items-end w-full h-full" style="background-color:rgba(0,0,0,0.6)">
+      <div class="container text-center">
+        <h2><strong>Buscamos</strong></h2>
+        <h2>Computadores usados <span> o </span> partes y piezas </h2>
+      </div>
+    </div>
+  </div>
+  <div class=" flex justify-center">
+    <div class="m-9 ">
+      <span class="big-text font-lora text-center">¿Cómo
+        <small>puedo ayudar?</small></span>
+      <hr>
+      <p>Buscamos computadores usados, partes y repuestos para entregarlos a estudiantes del IST YAVIRAC que no disponen
+        al momento de equipos propios</p>
+      <a class="btn">Quiero Participar <i class="fa fa-arrow-circle-o-right"></i></a>
+    </div>
+    <div class="h7 flex justif-center  items-center text-center">
+      <div class="bg-yellow-100 m-9">
+        <div class="font-medium text-tertiary">
+          <div class="font-lora text-center">
+            <img src="/public/imagenes/imagen3.jpg" alt=""> Dona un computador
+          </div>
+          <div class="font-lora text-center">
+            <img src="/public/imagenes/imagen2.jpg" alt=""> Dona partes y piezas
+          </div>
+          <div class="font-lora text-center">
+            <img src="/public/imagenes/imagen1.jpg" alt=""> Promueve el proyecto en tus redes
+          </div>
+          <div class="font-lora text-center">
+            <img src="/public/imagenes/imagen.jpg" alt=""> Hazte voluntario
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6"> <img class="img-responsive" style="width: 30%; padding-bottom: 5%;"
+          src="/public/imagenes/donante_20201226_183410.jpg" alt=""> </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="w-full h-20 bg-gray-100 " style="background-image:url('/public/imagenes/fondo.jpg')">
+    <div class="flex items-end w-full h-full" style="background-color:rgba(0,0,0,0.6)">
+      <div class="container text-center">
+        <h2>La
+          <strong>
+            educación
+          </strong>
+          es uno de los factores que más influye en el avance y progreso de personas y sociedades
+        </h2>
+      </div>
+    </div>
+  </div>
+  <section class="text-center">
+    <strong>
+    <h1>10</h1>
+    <h2>Estamos muy orgullosos de nuestros Amables
+    </strong><i></i>
+      <strong>Dontantes</strong>.
+    </h2>
+  </section>
+  <footer>
+    <div class="container bg-black text-1xl text-white-700" > 
+      <div class="row" style="background-color:rgba(63, 62, 62, 0.6)">
+        <div class="col-md-6"> 
+          <ul class="row">
+            <li class="col-sm-6 shadow text-center">
+              <ul class="social_icons">                              
+              </ul>
+              <h6 class="text-white-700">Participa con nosotros</h6>
+              <p class="text-white-700">Dirección: Ambato y Garcia Moreno, Campus IST YAVIRAC</p>
+              <p class="text-white-700">Teléfono : (593) 999 705 620</p>
+              <p class="text-white-700">Email : probayo@yavirac.edu.ec</p> 
+            </li>
+            <li class="col-sm-6 padding-l-60 text-center">
+              <h6 class="text-white-700">Links de Interés</h6>
+              <ul class="links">
+                <li><a href="http://yavirac.edu.ec" class="text-white-700">IST YAVIRAC</a></li>
+                <li><a href="#." class="text-white-700">Conoce al equipo</a></li>                
+              </ul>
+            </li>
+          </ul>
+        </div>
+               
+      </div>
+    </div>
+    <div class="text-white-700 text-center">
+      <p class="text-white-700 text-center">© 2021 Proyecto Nur Tech.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
